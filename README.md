@@ -1,3 +1,5 @@
+Version 1.0.0 Updated December 6, 2015
+
 This project contains the source code for my updated portfolio, soon to be hosted on Github pages.  In order to view the page on your own local browswer, you can download the project and then open the file titled 'index.html'.  This should automatically open up the web page in your default browser. 
 
 - [ ]  Determine default style rules for front page
