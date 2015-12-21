@@ -1,0 +1,18 @@
+body {
+    background-image: url('img/background.jpg');  
+}
+
+#bio {
+	border:  2px solid black;
+	
+}
+
+#header, #sub { 
+	text-align: center;
+}
+
+
+#navlist li {
+	display: inline;
+	text-align: right;
+}
