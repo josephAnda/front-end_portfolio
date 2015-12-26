@@ -1,7 +1,20 @@
-body {
-    background-image: url('img/background.jpg');  
+* {
+	font-family: sans-serif;
 }
 
+body {
+    /*background-image: url('img/background.jpg');*/
+    background-color: #0033FF;
+    color:  #FFF;  
+}
+
+h4 {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+#logo {
+	padding-left:  30px;
+}
 #bio {
 	border:  2px solid black;
 	
@@ -11,8 +24,19 @@ body {
 	text-align: center;
 }
 
-
+nav {
+	padding-top: 10px;
+}
 #navlist li {
 	display: inline;
 	text-align: right;
+	/*font-family: sans-serif;*/
+	font-weight: bold;
+}
+
+#navlist li a {
+	color:  #FFF;
+}
+#navdiv {
+	float: right;
 }
