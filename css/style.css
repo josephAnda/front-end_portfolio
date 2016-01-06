@@ -8,11 +8,45 @@
 	#navlist { 
 		font-size: 165%;
 		padding-right: 0%;
+		display: none;
 	}
 }
 
+@media only screen and (min-width: 400px) {
+	#navdiv {
+		display: none;
+	}
 
+	/*
+	#menu-box { 
+		display: none; <---Figure out menu display bug
+	}
+	#navlist {
+		display: none;
+	}
+	*/
+}
 
+@media only screen and (max-width: 400px) {
+	#navdiv2 {
+		display: none;
+	}
+}
+
+.footer {
+	padding-top:  25px;
+}
+
+#menu-box {
+	height: 40px;
+	width: 40px;
+	background-color: #6facff;
+	-webkit-border-radius: 5px;
+			border-radius: 5px;
+	
+	z-index: 1;
+	float: right;
+}
 
 body {
     /*background-image: url('img/background.jpg');*/
@@ -30,6 +64,10 @@ a, a:hover {
 	color: #0033FF;
 	font-weight: bold;
 }
+#midbox a {
+	color: white;
+}
+#logo { text-align: left; }
 #logo p {
 	padding-bottom: 0px;
 	margin-bottom: 0px;
@@ -45,7 +83,7 @@ a, a:hover {
 }
 
 #bio p#summary {
-	font-size:  2.8em;
+	font-size:  2.3em;
 	padding-top: 120px;
 	padding-bottom:  25px;
 
@@ -62,7 +100,7 @@ a, a:hover {
 nav {
 	padding-top: 10px;
 }
-#navlist li {
+.navbar li {
 	display: inline;
 	text-align: right;
 	/*font-family: sans-serif;*/
@@ -70,14 +108,14 @@ nav {
 
 }
 
-#navlist li a {
+.navbar li a {
 	color:  #FFF;
 }
 
-#navlist li a:hover {
+.navbar li a:hover {
 	background-color: black;
 }
-#navlist {
+.navbar {
 	float: right;
 	padding-right:  5%;
 }

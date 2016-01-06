@@ -15,18 +15,36 @@
 				<div class="col-md-6" id="header"></div>
 				<div class="col-md-3"></div>
 			</div>
-			<div class="row">
+			<div class="row" id="header">
 				<div class="col-md-6" id="logo">
 					<p style="font-weight:bold">JOSEPH ANDA</p>
 					<p>Front-end Developer</p>
 				</div>
 				
 				<div class="col-md-6" id="navdiv">
-					
+					<div id="menu-box"></div>	
 					<nav>
-						<ul id="navlist">
+						<ul class="navbar" id="navlist">
 							<li>
-								<a href="#header">ABOUT</a>
+								<a href="#about">ABOUT</a>
+							</li>
+							<li>
+								<a href="#header">PORTFOLIO</a>
+							</li>
+							<li>
+								<a href="#header">CONTACT</a>
+							</li>
+							<li>
+								<a href="#header">BLOG</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-md-6" id="navdiv2">
+					<nav>
+						<ul class="navbar" id="navlist2">
+							<li>
+								<a href="#about">ABOUT</a>
 							</li>
 							<li>
 								<a href="#header">PORTFOLIO</a>
@@ -55,17 +73,17 @@
 					</br>
 					</br>
 					</br>
-					<a>item 1</a>
+					<a>Neighborhood Map WebApp</a>
 					</br>
 					</br>
 					</br>
 				</div>
-				<div class="col-md-4" style="background-color: gray">
+				<div class="col-md-4" id="midbox" style="background-color: gray">
 					</br>
 					</br>
 					</br>
-					<a>item 2</a>
-					</br>
+					<a>Music Portfolio Page</a>
+					</br>	
 					</br>
 					</br>
 				</div>
@@ -73,12 +91,24 @@
 					</br>
 					</br>
 					</br>
-					<a>item 3</a>
+					<a>Frogger Arcade Game</a>
 					</br>
 					</br>
 					</br>
 				</div>
 			</div>
+
+			<div class="row">
+				<div class="footer">
+					<div class="col-md-4">
+						<p id="about">Joseph is a graduate of Stanford University and Udacity's Front-end Web Developer program.  His areas of expertise include software engineering, mechanical engineering, UI design, and education.
+						</p>
+					</div>
+					<div class="col-md-4"></div>
+					<div class="col-md-4"></div>
+				</div>
+			</div>
 		</div>
+		<script src="js/menu.js"></script>
 	</body>
 </html>
