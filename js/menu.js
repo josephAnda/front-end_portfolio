@@ -1,11 +1,10 @@
 var menuBox = document.getElementById('menu-box');
 var navigation = document.getElementById('navlist');
+var opened = false;
 
 menuBox.addEventListener('click', function() {
 	open();
 });
-
-var opened = false;
 
 function open() {
 	if (!opened) {
