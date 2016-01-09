@@ -31,7 +31,8 @@
 
 body {
     background-color: #0033FF;
-    color:  #FFF;  
+    color:  #FFF; 
+    margin-left: 0; 
 }
 
 nav {
@@ -52,6 +53,16 @@ a, a:hover {
 	float: right;
 }
 
+#socialMedia {
+	margin-left: 0;
+}
+#socialMedia img {
+	height: 40px;
+	width: 40px;
+}
+#socialMedia a:hover {
+	text-decoration: none;
+}
 #portfolio  {
 	text-align: center;
 }
