@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <!-- TODO:
 [  ]  Add photos to website
-[  ]  Make the portfolio links live 
-	[  ]  Determine graphics (if any) for portfolio links
+[!!]  Make the portfolio links live 
+	[!!]  Determine graphics (if any) for portfolio links
 	[  ]  Start coding up the music website 
 [  ]  Smooth out menu animations (if any)
 [  ]  Add transitions to a:hover style changes
 [!!]  Add facebook, github, G+ handle information  
 [  ]  Add a logo to page tab and header
-	[  ]  Determine suitable graphics software
+	[!!]  Determine suitable graphics software (Pixel for Mac??)
 [!!]  Transfer project to new machine 
 	[!!]  Learn how to pull and merge from project remotely 
-[  ]  Make website live (via github pages or webhost provider)
+[!!]  Make website live (via github pages or webhost provider)
 [  ]  Figure out who to pester with your new portfolio 
-[  ]  Add arrow icons
-[  ]  Add copyright footer 	
+[!!]  Add copyright footer 	
 -->
 <html lang="en">
 	<head>
@@ -55,16 +54,16 @@
 					<div id="menu-box"><img src="img/menu.png" alt="menu_icon" height="40" width="40"></img></div>	
 					<nav>
 						<ul class="navbar" id="navlist">
-							<li>
+							<li class="navItem">
 								<a href="#about">ABOUT</a>
 							</li>
-							<li>
+							<li class="navItem">
 								<a href="http://josephanda.github.io/" target="_blank" alt="portfolio page">PORTFOLIO</a>
 							</li>
-							<li>
+							<li class="navItem">
 								<a href="mailto:anda@alumni.stanford.edu">CONTACT</a>
 							</li>
-							<li>
+							<li class="navItem">
 								<a href="#header">BLOG</a>
 							</li>
 						</ul>
@@ -137,12 +136,18 @@
 
 			<div class="row">
 				<footer class="footer">
-					<div class="col-md-4">
-						<p id="about">Joseph is a graduate of Stanford University and Udacity's Front-end Web Developer program.  His areas of expertise include software engineering, mechanical engineering, UI design, and education.
-						</p>
+					<div class="row">
+						<div class="col-md-4">
+							<p id="about">Joseph is a graduate of Stanford University and Udacity's Front-end Web Developer program.  His areas of expertise include software engineering, mechanical engineering, UI design, and education.
+							</p>
+						</div>
+						<div class="col-md-4"></div>
+						<div class="col-md-4"></div>
 					</div>
-					<div class="col-md-4"></div>
-					<div class="col-md-4"></div>
+					<div style="text-align: center" class="row">
+						<small>Unless otherwise stated, content is copyright 2016 <a href="https://github.com/josephAnda">Joseph Anda</a>
+						</small>
+					</div>
 				</footer>
 			</div>
 		</div>
