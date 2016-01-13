@@ -73,6 +73,13 @@ a, a:hover {
 #portfolio a {
 	color: #0033FF;
 	font-weight: bold;
+	-webkit-transition: font-size 1.2s;
+    transition: font-size 1.2s;
+
+}
+
+#portfolio a:hover {
+	font-size: 130%;
 }
 
 #midbox a {
