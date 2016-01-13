@@ -12,7 +12,7 @@
 	#navlist { 
 		font-size: 165%;
 		padding-right: 0%;
-		display: none;
+		/*display: none;*/
 	}
 	#navdiv2 {
 		display: none;
@@ -38,7 +38,10 @@ body {
 nav {
 	padding-top: 10px;
 }
-
+a {
+	-webkit-transition: background-color 2s;
+    transition: background-color 2s;
+}
 a, a:hover {
 	color:  white;
 }
@@ -70,6 +73,13 @@ a, a:hover {
 #portfolio a {
 	color: #0033FF;
 	font-weight: bold;
+	-webkit-transition: font-size 1.2s;
+    transition: font-size 1.2s;
+
+}
+
+#portfolio a:hover {
+	font-size: 130%;
 }
 
 #midbox a {
@@ -94,7 +104,7 @@ a, a:hover {
 
 #bio p#summary {
 	font-size:  2.3em;
-	padding-top: 120px;
+	padding-top: 80px;
 	padding-bottom:  25px;
 
 }
@@ -126,7 +136,7 @@ a, a:hover {
 	color:  #FFF;
 }
 
-.navbar li a:hover {
+.navbar li a:hover, #bio a:hover {
 	background-color: black;
 }
 
