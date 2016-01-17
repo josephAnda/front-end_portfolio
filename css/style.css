@@ -156,7 +156,7 @@ a, a:hover {
 #box1 {
 	position: relative;
 }
-#description1 {
+.description {
 	width: 100%;
 }
 
