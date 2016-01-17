@@ -82,7 +82,7 @@ a, a:hover {
 	font-size: 130%;
 }
 
-#midbox a {
+#box2 a {
 	color: white;
 }
 
@@ -153,7 +153,16 @@ a, a:hover {
 .footer {
 	padding-top:  25px;
 }
+#box1 {
+	position: relative;
+}
+.description {
+	width: 100%;
+}
 
+#portfolio div {
+	padding: 0px;
+}
 
 
 
