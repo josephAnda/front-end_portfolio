@@ -46,6 +46,12 @@ a, a:hover {
 	color:  white;
 }
 
+
+
+#socialMedia img:hover,  #logo img:hover {
+	-webkit-filter: brightness(150%); 
+}
+
 #menu-box {
 	height: 40px;
 	width: 40px;
