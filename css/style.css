@@ -46,8 +46,6 @@ a, a:hover {
 	color:  white;
 }
 
-
-
 #socialMedia img:hover,  #logo img:hover {
 	-webkit-filter: brightness(150%); 
 }
@@ -82,8 +80,8 @@ a, a:hover {
 #portfolio a {
 	color: #0033FF;
 	font-weight: bold;
-	-webkit-transition: font-size 1.2s;
-    transition: font-size 1.2s;
+	-webkit-transition: font-size .8s;
+    transition: font-size .8s;
 }
 
 #portfolio a:hover {
@@ -166,6 +164,8 @@ a, a:hover {
 .description {
 	width: 100%;
 }
+
+
 
 #portfolio div {
 	padding: 0px;
