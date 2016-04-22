@@ -7,7 +7,23 @@
 		navigation = document.getElementById('navlist'),
 		opened = false,
 		boxes = document.querySelectorAll("#portfolio > div"),
-		descriptions = document.querySelectorAll('.description');
+		descriptions = document.querySelectorAll('.description'),
+		bio = $('#bio');
+	//  Holds the URLS for the backgreound images
+	var backgrounds = [
+      'url(css/img/guitar.jpg)', 
+      'url(css/img/mix.jpg)'
+    ];
+    //  Tracks the current backgorund image 
+    var current = 0
+    
+    //  The function and initiall call initiate the process of changing the background
+    function changeBackground() {
+    	bio.css('background-image', backgrounds[current = ++current % backgrounds.length]);
+    	setTimeout(changeBackground, 5000);
+    }
+    setTimeout(changeBackground, 5000);
+
 
 	//  Hide mobile nav initially + add menu logic
 	navigation.style.visibility = 'hidden';  
@@ -53,4 +69,5 @@
 		element.style.opacity = '0';
 		});
 	}
+	console.log(bio);
 }) ();
