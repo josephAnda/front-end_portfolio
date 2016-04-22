@@ -50,6 +50,7 @@ a, a:hover {
 	-webkit-filter: brightness(150%); 
 }
 
+
 #menu-box {
 	height: 40px;
 	width: 40px;
@@ -105,6 +106,10 @@ a, a:hover {
 #bio {
 	padding-left: 10%;
 	padding-right:  10%;
+	background-image:  url('img/guitar.jpg');
+	background-size: 100% 100%;
+	transition: background-image 1s linear 1s;
+	-webkit-transition: background-image 1s linear 1s; /* Safari */
 }
 
 #bio p#summary {
