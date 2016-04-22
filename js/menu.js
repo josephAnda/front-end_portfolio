@@ -2,6 +2,23 @@
 (function() {
 
 	"use strict";
+	var view = {
+		menuBox:  document.getElementById('menu-box'),
+		navigation:  document.getElementById('navlist'),
+		opened:  false,
+		boxes:  document.querySelectorAll("#portfolio > div"),
+		descriptions: document.querySelectorAll('.description'),
+		bio:  $('#bio'),
+		backgrounds:  [
+      		'url(css/img/guitar.jpg)', 
+      		'url(css/img/mix.jpg)'
+    	],
+    	current: 0,
+    	changeBackground: function() {
+    		view.bio.css('background-image', backgrounds[current = ++current % backgrounds.length]);
+    		setTimeout(view.changeBackground, 5000);
+    	}
+	}
 	//  Use the following variables:
 	var menuBox = document.getElementById('menu-box'),
 		navigation = document.getElementById('navlist'),
@@ -15,14 +32,11 @@
       'url(css/img/mix.jpg)'
     ];
     //  Tracks the current backgorund image 
-    var current = 0
+    var current = 0;
     
     //  The function and initiall call initiate the process of changing the background
-    function changeBackground() {
-    	bio.css('background-image', backgrounds[current = ++current % backgrounds.length]);
-    	setTimeout(changeBackground, 5000);
-    }
-    setTimeout(changeBackground, 5000);
+    
+    setTimeout(view.changeBackground, 5000);
 
 
 	//  Hide mobile nav initially + add menu logic
