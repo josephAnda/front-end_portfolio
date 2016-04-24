@@ -1,6 +1,6 @@
 
 (function() {
-	//  Finish refactoring this for MVC paradigm  
+	//  [!!]  Finish refactoring this for MVC paradigm  
 	"use strict";
 	var view = {
 		menuBox:  document.getElementById('menu-box'),
