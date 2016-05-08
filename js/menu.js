@@ -1,73 +1,73 @@
 
 (function() {
-
+	//  [!!]  Finish refactoring this for MVC paradigm  
 	"use strict";
-	//  Use the following variables:
-	var menuBox = document.getElementById('menu-box'),
-		navigation = document.getElementById('navlist'),
-		opened = false,
-		boxes = document.querySelectorAll("#portfolio > div"),
-		descriptions = document.querySelectorAll('.description'),
-		bio = $('#bio');
-	//  Holds the URLS for the backgreound images
-	var backgrounds = [
-      'url(css/img/guitar.jpg)', 
-      'url(css/img/mix.jpg)'
-    ];
-    //  Tracks the current backgorund image 
-    var current = 0
-    
+	var view = {
+		menuBox:  document.getElementById('menu-box'),
+		navigation:  document.getElementById('navlist'),
+		opened:  false,
+		boxes:  document.querySelectorAll("#portfolio > div"),
+		descriptions: document.querySelectorAll('.description'),
+		bio:  $('#bio'),
+		backgrounds:  [
+      		'url(css/img/guitar.jpg)', 
+      		'url(css/img/mix.jpg)'
+    	],
+    	current: 0,	   
+    	init: function() {
+			//  Hide mobile nav initially + add menu logic
+			view.navigation.style.visibility = 'hidden';  
+			view.menuBox.addEventListener('click', function() {
+				controller.open();
+			});
+    	}
+	}
+	var controller = {
+		init: function() {
+			view.init();
+			setTimeout(controller.changeBackground, 5000);
+			controller.addMouseOvers();
+		},
+		changeBackground: function() {
+    		view.bio.css('background-image', view.backgrounds[view.current = ++view.current % view.backgrounds.length]);
+    		setTimeout(controller.changeBackground, 5000);
+    	},
+		addMouseOvers: function() {
+    		
+    		//  Add mouseover effects for all item descriptions 
+			for (var i=0; i<view.boxes.length; i++) {
+				view.descriptions.item(i).style.opacity = '0';
+				controller.fadeIn(view.boxes.item(i), view.descriptions.item(i));
+				controller.fadeOut(view.boxes.item(i), view.descriptions.item(i));
+			}
+    	}, 
+    	open: function() {
+    		if (!view.opened) {
+			view.navigation.style.transition = 'all 0.5s ease';
+			view.navigation.style.transform = 'translatey(15px)';
+			view.navigation.style.visibility = 'visible';
+			view.opened = true;
+
+			} else {
+				view.navigation.style.transition = 'all 0.2s ease';
+				view.navigation.style.transform = 'translatey(-2px)';
+				view.navigation.style.visibility = 'hidden';
+				view.opened = false;
+			}
+    	},
+    	fadeIn: function(box, element) {
+    		box.addEventListener('mouseover', function() {
+				element.style.transition = 'opacity .25s ease-in-out';
+				element.style.opacity = '1';
+			});
+    	},
+    	fadeOut: function(box, element) {
+    		box.addEventListener('mouseout', function() {
+				element.style.transition = 'opacity .25s ease-in-out';
+				element.style.opacity = '0';
+			});
+    	}
+	}
     //  The function and initiall call initiate the process of changing the background
-    function changeBackground() {
-    	bio.css('background-image', backgrounds[current = ++current % backgrounds.length]);
-    	setTimeout(changeBackground, 5000);
-    }
-    setTimeout(changeBackground, 5000);
-
-
-	//  Hide mobile nav initially + add menu logic
-	navigation.style.visibility = 'hidden';  
-	menuBox.addEventListener('click', function() {
-		open();
-	});
-
-	//  Add mouseover effects for all item descriptions 
-	for (var i=0; i<boxes.length; i++) {
-		descriptions.item(i).style.opacity = '0';
-		fadeIn(boxes.item(i), descriptions.item(i));
-		fadeOut(boxes.item(i), descriptions.item(i));
-	}
-
-	//  Open and close 'menuBox' element on page
-	function open() {
-		if (!opened) {
-			navigation.style.transition = 'all 0.5s ease';
-			navigation.style.transform = 'translatey(15px)';
-			navigation.style.visibility = 'visible';
-			opened = true;
-
-		} else {
-			navigation.style.transition = 'all 0.2s ease';
-			navigation.style.transform = 'translatey(-2px)';
-			navigation.style.visibility = 'hidden';
-			opened = false;
-		}
-	}
-
-	//  Show item description 
-	function fadeIn(box, element) {
-		box.addEventListener('mouseover', function() {
-			element.style.transition = 'opacity .25s ease-in-out';
-			element.style.opacity = '1';
-		});
-	}
-
-	//  Hide item description 
-	function fadeOut(box, element) {
-		box.addEventListener('mouseout', function() {
-		element.style.transition = 'opacity .25s ease-in-out';
-		element.style.opacity = '0';
-		});
-	}
-	console.log(bio);
+	controller.init();
 }) ();
