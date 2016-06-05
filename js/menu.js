@@ -2,6 +2,7 @@
 (function() {
 	//  [!!]  Finish refactoring this for MVC paradigm  
 	"use strict";
+
 	var view = {
 		menuBox:  document.getElementById('menu-box'),
 		navigation:  document.getElementById('navlist'),
@@ -22,12 +23,14 @@
 			});
     	}
 	}
+
 	var controller = {
 		init: function() {
 			view.init();
 			setTimeout(controller.changeBackground, 5000);
 			controller.addMouseOvers();
 		},
+		//  The idea for the function below came from Stack Overflow
 		changeBackground: function() {
     		view.bio.css('background-image', view.backgrounds[view.current = ++view.current % view.backgrounds.length]);
     		setTimeout(controller.changeBackground, 5000);
@@ -68,6 +71,7 @@
 			});
     	}
 	}
-    //  The function and initiall call initiate the process of changing the background
+
+    //  Initialize	
 	controller.init();
 }) ();
