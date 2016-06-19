@@ -104,24 +104,62 @@ a, a:hover {
 }
 
 #bio {
+	position: relative;
+	height:  500px;
 	padding-left: 10%;
 	padding-right:  10%;
 	background-image:  url('img/guitar.jpg');
+	background-color: rgba(0, 0, 0, 0.5);
 	background-size: 100% 100%;
 	transition: background-image 1s linear 1s;
 	-webkit-transition: background-image 1s linear 1s; /* Safari */
 }
 
+/*  Below is a technique from http://stackoverflow.com/questions/9182978/semi-transparent-color-layer-over-background-image 
+that allows creation of a color layer overlaid upon the image in #bio */
+.layer {
+    background-color: rgba(55, 55, 55, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 #bio p#summary {
+	position: absolute;
+	top: 20px;
+	left: 100px
+	z-index: 1;
+	text-align: center;
 	font-size:  2.3em;
-	padding-top: 80px;
 	padding-bottom:  25px;
 
+}
+
+.btn-primary, .btn-secondary {
+	position: absolute;
+	bottom: 20px;
+	z-index: 1;
+}
+
+.btn-primary {
+	background-color: #0033ff;
+	left: 100px;
+
+}
+.btn-secondary {
+	background-color: #000;
+	left: 300px;
 }
 
 #bio p {
 	padding-bottom:  80px;
 	font-size:  1.2em;
+}
+
+#skills {
+	font-size: .7em;
 }
 
 #header, #sub { 
