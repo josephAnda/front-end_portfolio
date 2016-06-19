@@ -2,6 +2,7 @@
 (function() {
 	//  [!!]  Finish refactoring this for MVC paradigm  
 	"use strict";
+
 	var view = {
 		menuBox:  document.getElementById('menu-box'),
 		navigation:  document.getElementById('navlist'),
@@ -13,6 +14,7 @@
       		'url(css/img/guitar.jpg)', 
       		'url(css/img/mix.jpg)'
     	],
+    	waitTime: 5000, //  Describes the ms between background changes
     	current: 0,	   
     	init: function() {
 			//  Hide mobile nav initially + add menu logic
@@ -22,15 +24,17 @@
 			});
     	}
 	}
+
 	var controller = {
 		init: function() {
 			view.init();
-			setTimeout(controller.changeBackground, 5000);
+			setTimeout(controller.changeBackground, view.waitTime);
 			controller.addMouseOvers();
 		},
+		//  The idea for the function below came from Stack Overflow
 		changeBackground: function() {
     		view.bio.css('background-image', view.backgrounds[view.current = ++view.current % view.backgrounds.length]);
-    		setTimeout(controller.changeBackground, 5000);
+    		setTimeout(controller.changeBackground, view.waitTime);
     	},
 		addMouseOvers: function() {
     		
@@ -68,6 +72,7 @@
 			});
     	}
 	}
-    //  The function and initiall call initiate the process of changing the background
+
+    //  Initialize	
 	controller.init();
 }) ();
