@@ -16,7 +16,7 @@
 	#navdiv2 {
 		display: none;
 	}
-	#bio p a, #portfolio, footer {
+	#bio p a, .portfolio, footer {
 		font-size:  160%;
 	}
 }
@@ -74,19 +74,19 @@ a, a:hover {
 	text-decoration: none;
 }
 
-#portfolio  {
+.portfolio  {
 	text-align: center;
 }
 
-#portfolio a {
+.portfolio a {
 	color: #0033FF;
 	font-weight: bold;
 	-webkit-transition: font-size .8s;
     transition: font-size .8s;
 }
 
-#portfolio a:hover {
-	font-size: 130%;
+.portfolio a:hover {
+	font-size: 120%;
 }
 
 #box2 a {
@@ -163,9 +163,6 @@ that allows creation of a color layer overlaid upon the image in #bio */
 	font-size: .7em;
 }
 
-#summaryText {
-	font-size: .5em;
-}
 
 #header, #sub { 
 	text-align: center;
@@ -211,10 +208,21 @@ that allows creation of a color layer overlaid upon the image in #bio */
 
 .description {
 	width: 100%;
+	background-color: #708090;
+	/*  The lines below were an attempt to keep the description from being pushed down by the expanding text after the 
+	max-height property was introduced to the .portfolio > div items.  The style rules end up being ignored due to the max
+	height rule bellow.  Ideally we could expand the text without expanding the containing element or pushing any elements 
+	further away. */
+	/*position: absolute;*/  
+	/*bottom: 0px;*/
 }
 
-#portfolio div {
+.portfolio div {
 	padding: 0px;
+}
+
+.portfolio > div {
+	max-height: 140px;
 }
 
 

@@ -7,7 +7,7 @@
 		menuBox:  document.getElementById('menu-box'),
 		navigation:  document.getElementById('navlist'),
 		opened:  false,
-		boxes:  document.querySelectorAll("#portfolio > div"),
+		boxes:  document.querySelectorAll(".portfolio > div"),
 		descriptions: document.querySelectorAll('.description'),
 		bio:  $('#bio'),
 		backgrounds:  [
