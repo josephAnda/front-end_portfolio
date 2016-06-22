@@ -163,6 +163,10 @@ that allows creation of a color layer overlaid upon the image in #bio */
 	font-size: .7em;
 }
 
+#summaryText {
+	font-size: .5em;
+}
+
 #header, #sub { 
 	text-align: center;
 }
