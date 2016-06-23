@@ -105,7 +105,7 @@ a, a:hover {
 
 #bio {
 	position: relative;
-	height:  500px;
+	height:  450px;
 	padding-left: 10%;
 	padding-right:  10%;
 	background-image:  url('img/guitar.jpg');
@@ -130,7 +130,7 @@ that allows creation of a color layer overlaid upon the image in #bio */
 #bio p#summary {
 	position: absolute;
 	top: 20px;
-	left: 100px
+	left: 100px;
 	z-index: 1;
 	text-align: left;
 	font-size:  2.3em;
@@ -138,20 +138,24 @@ that allows creation of a color layer overlaid upon the image in #bio */
 
 }
 
-.btn-primary, .btn-secondary {
+#about {
+	font-weight: bold;
+}
+
+.buttons {
 	position: absolute;
-	bottom: 20px;
 	z-index: 1;
+	top: 300px;
 }
 
 .btn-primary {
 	background-color: #00CCFF;
-	left: 100px;
-
+	
 }
+
 .btn-secondary {
 	background-color: #000;
-	left: 300px;
+	
 }
 
 #bio p {
