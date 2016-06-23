@@ -28,7 +28,7 @@
 }
 
 body {
-    background-color: #0033FF;
+    background-color: #00CCFF;
     color:  #FFF; 
     margin-left: 0; 
 }
@@ -79,7 +79,7 @@ a, a:hover {
 }
 
 .portfolio a {
-	color: #0033FF;
+	color: #00CCFF;
 	font-weight: bold;
 	-webkit-transition: font-size .8s;
     transition: font-size .8s;
@@ -145,7 +145,7 @@ that allows creation of a color layer overlaid upon the image in #bio */
 }
 
 .btn-primary {
-	background-color: #0033ff;
+	background-color: #00CCFF;
 	left: 100px;
 
 }
