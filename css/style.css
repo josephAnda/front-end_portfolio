@@ -19,6 +19,14 @@
 	#bio p a, .portfolio, footer {
 		font-size:  160%;
 	}
+
+	footer{
+		margin-left: 1em;
+    	margin-right: 1em;
+	}
+	#bio button {
+		margin-bottom: .5em;
+	}
 	#socialMedia {
 		margin-top: 3.5em;
 		margin-left:  1em;
@@ -31,6 +39,8 @@
 	}
 }
 
+
+
 body {
     background-color: #00CCFF;
     color:  #FFF; 
@@ -38,7 +48,7 @@ body {
 }
 
 #mainContent {
-	max-width: 80%;
+	max-width: 90%;
 	margin: 0 auto;
 }
 nav {
@@ -98,9 +108,7 @@ a, a:hover {
 	font-size: 120%;
 }
 
-#box2 a {
-	color: white;
-}
+
 
 #logo { 
 	text-align: left;
@@ -110,6 +118,16 @@ a, a:hover {
 #logo p {
 	padding-bottom: 0px;
 	margin-bottom: 0px;
+}
+
+#box4 {
+	background-color: #fff;
+}
+
+@media only screen and (max-width: 992px) {
+	#box4 {
+		background-color: gray;
+	}
 }
 
 #bio {
