@@ -4,6 +4,7 @@
 	"use strict";
 
 	var view = {
+
 		menuBox:  document.getElementById('menu-box'),
 		navigation:  document.getElementById('navlist'),
 		opened:  false,
@@ -15,27 +16,32 @@
       		'url(css/img/mix.jpg)'
     	],
     	waitTime: 5000, //  Describes the ms between background changes
-    	current: 0,	   
+    	current: 0,	   //  To index current picture in an array of background images
+
     	init: function() {
 			//  Hide mobile nav initially + add menu logic
 			view.navigation.style.visibility = 'hidden';  
 			view.menuBox.addEventListener('click', function() {
 				controller.open(view);
 			});
+			setTimeout(view.changeBackground, view.waitTime);
+    	},
+
+    	//  The idea for the function below came from Stack Overflow
+		changeBackground: function() {
+    		view.bio.css('background-image', view.backgrounds[view.current = ++view.current % view.backgrounds.length]);
+    		setTimeout(view.changeBackground, view.waitTime);
     	}
 	}
 
 	var controller = {
-		init: function() {
-			view.init();
-			setTimeout(controller.changeBackground, view.waitTime);
-			controller.addMouseOvers(view);
+
+		init: function(viewModule) {
+			viewModule.init();
+			controller.addMouseOvers(viewModule);
 		},
-		//  The idea for the function below came from Stack Overflow
-		changeBackground: function() {
-    		view.bio.css('background-image', view.backgrounds[view.current = ++view.current % view.backgrounds.length]);
-    		setTimeout(controller.changeBackground, view.waitTime);
-    	},
+		
+    	//  Triggers the project descriptions that appear on the mouseover event 
 		addMouseOvers: function(viewModule) {
     		
     		//  Add mouseover effects for all item descriptions 
@@ -44,7 +50,8 @@
 				controller.fadeIn(viewModule.boxes.item(i), viewModule.descriptions.item(i));
 				controller.fadeOut(viewModule.boxes.item(i), viewModule.descriptions.item(i));
 			}
-    	}, 
+    	},
+
     	open: function(viewModule) {
     		if (!viewModule.opened) {
 			viewModule.navigation.style.transition = 'all 0.5s ease';
@@ -59,12 +66,14 @@
 				viewModule.opened = false;
 			}
     	},
+
     	fadeIn: function(box, element) {
     		box.addEventListener('mouseover', function() {
 				element.style.transition = 'opacity .25s ease-in-out';
 				element.style.opacity = '1';
 			});
     	},
+
     	fadeOut: function(box, element) {
     		box.addEventListener('mouseout', function() {
 				element.style.transition = 'opacity .25s ease-in-out';
@@ -74,5 +83,5 @@
 	}
 
     //  Initialize	
-	controller.init();
+	controller.init(view);
 }) ();

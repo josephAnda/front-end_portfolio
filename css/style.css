@@ -58,12 +58,12 @@ nav {
 	padding-top: 10px;
 }
 
-a {
+nav a {
 	-webkit-transition: background-color 2s;
     transition: background-color 2s;
 }
 
-a, a:hover {
+nav a, nav a:hover {
 	color:  white;
 }
 
@@ -185,6 +185,9 @@ that allows creation of a color layer overlaid upon the image in #bio */
 	left: 3em;
 }
 
+.btn {
+	color: white;
+}
 .btn-primary {
 	background-color: #00CCFF;
 	
@@ -226,7 +229,7 @@ that allows creation of a color layer overlaid upon the image in #bio */
 	color:  #FFF;
 }
 
-.navbar li a:hover, #bio a:hover {
+.navbar li a:hover {
 	background-color: black;
 }
 
