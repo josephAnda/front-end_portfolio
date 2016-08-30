@@ -4,6 +4,10 @@
 [  ]  Add a third photo
 [  ]  Use PageSpeed Insights to test speed (publish this on website)
 [  ]  Enable some form of backend functionality (consider comments)
+[  ]  Find/correct the social media icon assets (make them white)
+[  ]  Darken the background for the top and bottom section
+[  ]  Add borders of some sort (?)
+[!!]  Fix the bug of the tiny text in the footer (probably caused by adjacent social media icons)
 [!!]  Fix the 'view resume' button (extraneous element fades into view upon hover event)
 [  ]  Investigate the console bug of $(document) . . . . not existing.  Try loading jquery before bootstrap.
 ^Achievable before August 30, 2016
@@ -27,29 +31,11 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="icon" type="image/png" href="img/favicon.ico">
 	</head>
-	<body>
-		<div class="row" id="socialMedia">
-			<a href="https://www.facebook.com/" title="Facebook Link" target="_blank" alt="facebook website">
-				<img src="img/facebook.png" alt="facebookIcon"></img>
-			</a>
-			<a href="https://plus.google.com/u/0/116406841381375184793/posts" title="G+ Link"  target="_blank" alt="GooglePlus Page">
-				<img src="img/GooglePlus.png" alt="G+ Icon"></img>
-			</a>
-			<a href="https://www.linkedin.com/in/josephanda" title="LinkedIn Link"  target="_blank" alt="LinkedIn Profile Page">
-				<img src="img/LinkedIn.png" alt="LinkedIn Icon"></img>
-			</a>
-			<a href="#" title="Twitter Link" target="_blank" alt="Twitter Feed">
-				<img src="img/Twitter.png" alt="Twitter Icon"></img>
-			<a>	
-			<a href="https://github.com/josephAnda" title="Github Link" target="_blank" alt="Github Page">
-				<img src="img/Githubicon.png" alt="Github Icon"></img>
-			</a>	
-		</div>
-		
-		<div class="row">
+	<body>		
+		<div class="row" id="toprow">
 			<div class="col-md-6" id="logo">
 				<a href="http://josephanda.github.io/front-end_portfolio/" alt="home">
-					<img src="img/Banner_transparent.png" style="width: 300px" alt="banner"></img>
+					<img src="img/Banner_transparent.png" alt="banner"></img>
 				</a>
 			</div>
 			
@@ -203,16 +189,38 @@
 
 			<div class="row">
 				<footer class="footer">
+					
+					<div class="row" id="socialMedia">
+						<a href="https://www.facebook.com/" title="Facebook Link" target="_blank" alt="facebook website">
+							<img src="img/facebook.png" alt="facebookIcon"></img>
+						</a>
+						<a href="https://plus.google.com/u/0/116406841381375184793/posts" title="G+ Link"  target="_blank" alt="GooglePlus Page">
+							<img src="img/GooglePlus.png" alt="G+ Icon"></img>
+						</a>
+						<a href="https://www.linkedin.com/in/josephanda" title="LinkedIn Link"  target="_blank" alt="LinkedIn Profile Page">
+							<img src="img/LinkedIn.png" alt="LinkedIn Icon"></img>
+						</a>
+						<a href="#" title="Twitter Link" target="_blank" alt="Twitter Feed">
+							<img src="img/Twitter.png" alt="Twitter Icon"></img>
+						<a>	
+						<a href="https://github.com/josephAnda" title="Github Link" target="_blank" alt="Github Page">
+							<img src="img/Githubicon.png" alt="Github Icon"></img>
+						</a>	
+					</div>
+					</div>
 					<div class="row">
+						<div class="col-md-2" id="bioPic">
+							<img src="http://placehold.it/150x150"></img>
+						</div>
 						<div class="col-md-4">
 							<p id="about">Joseph is a graduate of Stanford University and Udacity's Front-end Web Developer program.  His areas of expertise include software engineering, mechanical engineering, UI design, and education.
 							</p>
 						</div>
-						<div class="col-md-4"></div>
+						
 						<div class="col-md-4"></div>
 					</div>
 					<div style="text-align: center" class="row">
-						<small>Unless otherwise stated, content is copyright &copy 2016 <a href="https://github.com/josephAnda">Joseph Anda</a>
+						<small id="copyright">Unless otherwise stated, content is copyright &copy 2016 <a href="https://github.com/josephAnda">Joseph Anda</a>
 						</small>
 					</div>
 				</footer>

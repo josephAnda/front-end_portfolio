@@ -2,52 +2,14 @@
 	font-family: sans-serif;
 }
 
-@media only screen and (max-width: 552px) {
-	body { 
-		font-size: 90%; 
-	}
-
-	#logo { 
-		font-size:  280%;
-	}
-
-	#navlist { 
-		font-size: 165%;
-		padding-right: 0%;
-	}
-
-
-	#navdiv2 {
-		display: none;
-	}
-
-	#bio p a, .portfolio, footer {
-		font-size:  160%;
-	}
-
-
-	#bio button {
-		margin-bottom: .5em;
-	}
-
-	#socialMedia {
-		margin-top: 3.5em;
-		margin-left:  1em;
-	}
-}
-
-@media only screen and (min-width: 552px) {
-	#navdiv {
-		display: none;
-	}
-}
-
-
-
 body {
     background-color: #00CCFF;
     color:  #FFF; 
     margin-left: 0; 
+}
+
+#toprow {
+	margin-top: 20px;
 }
 
 #mainContent {
@@ -83,7 +45,7 @@ nav a, nav a:hover {
 }
 
 #socialMedia {
-	margin-left: 1em;
+	margin-left: 0;
 	margin-top:  2.5em;
 }
 
@@ -121,6 +83,11 @@ footer {
 #logo { 
 	text-align: left;
 	padding:  10px 30px 0px 30px;
+	display: inline;
+}
+
+#logo img {
+	width:  23em;
 }
 
 #logo p {
@@ -176,6 +143,7 @@ that allows creation of a color layer overlaid upon the image in #bio */
 
 #about {
 	font-weight: bold;
+
 }
 
 .buttons {
@@ -241,6 +209,7 @@ that allows creation of a color layer overlaid upon the image in #bio */
 #navdiv {
 	float: right;
 	margin-right: 1em;
+	width: 20%;
 }
 
 .footer {
@@ -269,6 +238,58 @@ that allows creation of a color layer overlaid upon the image in #bio */
 .portfolio > div {
 	max-height: 140px;
 }
+
+@media only screen and (max-width: 552px) {
+	body { 
+		font-size: 90%; 
+	}
+
+	#logo { 
+		font-size:  280%;
+	}
+
+	#logo img {
+		width:  10em;
+	}
+	#navlist { 
+		font-size: 165%;
+		padding-right: 0%;
+	}
+
+
+	#navdiv2 {
+		display: none;
+	}
+
+	#bio p a, .portfolio, footer {
+		font-size:  160%;
+	}
+
+
+	#bio button {
+		margin-bottom: .5em;
+	}
+
+	#socialMedia {
+		margin-top: 3.5em;
+		margin-left:  1em;
+	}
+
+	#about {
+		font-size:  1.4em;
+	}
+
+	#copyright {
+		font-size:  1em;
+	}
+}
+
+@media only screen and (min-width: 552px) {
+	#navdiv {
+		display: none;
+	}
+}
+
 
 
 

@@ -1,4 +1,7 @@
 
+//  The following is the main function for page logic
+//  WARNING:  jQuery dependencies
+
 (function() {
 	
 	"use strict";
